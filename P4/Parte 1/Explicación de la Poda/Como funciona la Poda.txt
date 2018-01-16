@@ -1,0 +1,18 @@
+Como funciona la poda:
+
+->Tenemos la empatia temporal hasta el nodo en el que estamos (EmptTemp)
+->Tenemos el numero de nodos que nos quedan por agregar al conjunto solución cada vez que agregamos uno nuevo(NumNodosPorExplorar)
+->Tenemos un vector con todas las empatias que hay en nuestro problema ordenadas con orden decreciente (VectorEmpatias)
+
+Cada vez que agregamos un nodo, antes de explorar en profundidad hacemos:
+1º for (i=0;i< NumNodosPorExplorar + 1 ;i++){
+		SumaMejoresEmpatias += VectorEmpatias[i]; //SumaMejoreEmpatais contiene el valor del mejor caso posible de empatias que nos podriamos encontrar
+	}
+
+2º if ( (SumaMejoresEmpatias + EmptTemp) < MejorSolucion) //MejorSolucion es la mejor solución que tenemos hasta el momento
+		return Podamos;
+	else
+		return NO_Podamos
+
+	
+				

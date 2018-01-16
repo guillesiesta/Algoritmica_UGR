@@ -1,0 +1,12 @@
+Como funciona el algortimo que soluciona el problema del Arbol?
+Explicación Paso a Paso:
+1º->Se busca una hoja cualquiera del arbol que ESTE EN EL ÚLTIMO NIVEL DE ESTE (NodoHoja)
+2º->Se incluye en el conjunto solución al nodo padre de NodoHoja  (NodoPadre)
+3º->Se eliminan todas las aristas que van hacia los nodos hijos del NodoPadre.
+4º->Se elimina la arista que va de NodoPadre hacia su padre
+5º->Se vuelve al paso 1.
+
+Esta es la explicación de como funciona el algoritmo que soluciona el problema del arbol.
+Tiene Eficiencia de orden cuadratica, es decir, O(n^2).
+Las estructuras de datos usadas han sido 1 Matriz dinámica de adyacencia para representar
+el arbol y 1 cola FIFO para almacenar el conjunto solución.
